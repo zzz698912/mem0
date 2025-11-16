@@ -128,6 +128,7 @@ export function FormView({ settings, onChange }: FormViewProps) {
     "Hugging Face": "huggingface",
     "Vertex AI": "vertexai",
     "Gemini": "gemini",
+    "Qwen": "qwen",
     "LM Studio": "lmstudio",
     "Together": "together",
     "LangChain": "langchain",
