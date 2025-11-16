@@ -2,10 +2,6 @@ FROM registry.cn-hangzhou.aliyuncs.com/yuanzhang-images/python:3.12-slim
 
 LABEL org.opencontainers.image.name="mem0/openmemory-mcp"
 
-
-# 复制 mem0 目录结构（用于构建时）
-COPY mem0 /usr/src/mem0
-
 WORKDIR /usr/src/openmemory
 
 COPY requirements.txt .
