@@ -29,9 +29,16 @@ build:
 up:
 	NEXT_PUBLIC_USER_ID=$(USER) NEXT_PUBLIC_API_URL=$(NEXT_PUBLIC_API_URL) docker compose up
 
+# 这个会把所有容器 和卷全部清除。慎用。
 down:
 	docker compose down -v
 	rm -f api/openmemory.db
+
+start:
+	NEXT_PUBLIC_USER_ID=$(USER) NEXT_PUBLIC_API_URL=$(NEXT_PUBLIC_API_URL) docker compose up -d
+
+stop:
+	docker compose stop
 
 logs:
 	docker compose logs -f
