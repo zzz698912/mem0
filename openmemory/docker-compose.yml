@@ -19,9 +19,16 @@ services:
       - "8765:8765"
     volumes:
       - ./api:/usr/src/openmemory
-      - ../../mem0:/usr/src/mem0  # 挂载本地 mem0 代码
+      - ../:/usr/src/mem0  # 挂载本地 mem0 代码
     command: >
-      sh -c "cd /usr/src/mem0 && pip install -e . && cd /usr/src/openmemory && uvicorn main:app --host 0.0.0.0 --port 8765 --reload --workers 4"
+      sh -c "
+        pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ &&
+        pip config set install.trusted-host mirrors.aliyun.com &&
+        pip install --upgrade pip &&
+        pip install -r requirements.txt &&
+        pip install -e /usr/src/mem0 &&
+        uvicorn main:app --host 0.0.0.0 --port 8765 --reload --workers 4
+      "
   openmemory-ui:
     build:
       context: ui/
