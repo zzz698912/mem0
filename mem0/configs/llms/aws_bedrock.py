@@ -126,7 +126,7 @@ class AWSBedrockConfig(BaseLlmConfig):
         # Validate provider
         valid_providers = [
             "ai21", "amazon", "anthropic", "cohere", "meta", "mistral", 
-            "stability", "writer", "deepseek", "gpt-oss", "perplexity", 
+            "stability", "writer", "deepseek","qwen","gpt-oss", "perplexity",
             "snowflake", "titan", "command", "j2", "llama"
         ]
         

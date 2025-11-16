@@ -20,6 +20,7 @@ MEMORY_CATEGORIZATION_PROMPT = """Your task is to assign each piece of informati
 - News: articles, headlines, trending topics
 - Organization: meetings, appointments, calendars
 - Goals: ambitions, KPIs, long‑term objectives
+- CodeExample: code snippets, examples, tutorials
 
 Guidelines:
 - Return only the categories under 'categories' key in the JSON format.

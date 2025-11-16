@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 PROVIDERS = [
     "ai21", "amazon", "anthropic", "cohere", "meta", "mistral", "stability", "writer", 
-    "deepseek", "gpt-oss", "perplexity", "snowflake", "titan", "command", "j2", "llama"
+    "deepseek","qwen","gpt-oss", "perplexity", "snowflake", "titan", "command", "j2", "llama"
 ]
 
 

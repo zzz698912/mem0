@@ -1,7 +1,7 @@
 # syntax=docker.io/docker/dockerfile:1
 
 # Base stage for common setup
-FROM node:18-alpine AS base
+FROM registry.cn-hangzhou.aliyuncs.com/yuanzhang-images/node:18-alpine AS base
 
 # Install dependencies for pnpm
 RUN apk add --no-cache libc6-compat curl && \
@@ -14,7 +14,7 @@ FROM base AS deps
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --registry https://registry.npmmirror.com
 
 FROM base AS builder
 WORKDIR /app
