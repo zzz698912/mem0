@@ -115,6 +115,7 @@ export function FormView({ settings, onChange }: FormViewProps) {
     "AWS Bedrock": "aws_bedrock",
     "Gemini": "gemini",
     "DeepSeek": "deepseek",
+    "Qwen": "qwen",
     "xAI": "xai",
     "LM Studio": "lmstudio",
     "LangChain": "langchain",
